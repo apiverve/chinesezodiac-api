@@ -1,0 +1,35 @@
+{
+  "name": "@apiverve/chinesezodiac",
+  "version": "1.1.12",
+  "description": "Chinese Zodiac returns the zodiac animal, element, and characteristics for any birth date. Accurately accounts for the Chinese lunar calendar - the zodiac year starts on Chinese New Year, not January 1st.",
+  "main": "index.js",
+  "types": "index.d.ts",
+  "scripts": {
+    "test": "mocha",
+    "example": "node examples/basic.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/apiverve/chinesezodiac-api.git",
+    "directory": "npm"
+  },
+  "keywords": [
+    "chinese zodiac", "zodiac animal", "lunar year", "chinese astrology", "shengxiao"
+  ],
+  "author": "APIVerve <hello@apiverve.com> (http://apiverve.com/)",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/apiverve/chinesezodiac-api/issues"
+  },
+  "homepage": "https://apiverve.com/marketplace/chinesezodiac?utm_source=npm",
+  "devDependencies": {
+    "mocha": "^11.0.1",
+    "chai": "^5.1.2",
+    "dotenv": "^16.4.7"
+  },
+  "dependencies": {
+    "node-fetch": "^3.3.2",
+    "promise": "^8.3.0",
+    "axios": "1.13.2"
+  }
+}
