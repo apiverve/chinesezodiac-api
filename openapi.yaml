@@ -1,32 +1,35 @@
 openapi: 3.0.4
 info:
   title: Chinese Zodiac
-  description: Chinese Zodiac returns the zodiac animal, element, and characteristics for any birth date. Accurately accounts for the Chinese lunar calendar - the zodiac year starts on Chinese New Year, not January 1st.
+  description: >-
+    Chinese Zodiac returns the zodiac animal, element, and characteristics for
+    any birth date. Accurately accounts for the Chinese lunar calendar - the
+    zodiac year starts on Chinese New Year, not January 1st.
   termsOfService: https://apiverve.com/terms/
   contact:
     name: APIVerve Support
     email: hello@apiverve.com
     url: https://apiverve.com/contact
-  version: 1.0.9
+  version: 1.0.0
 externalDocs:
   description: Learn more about APIVerve
   url: https://docs.apiverve.com?utm_source=openapi
 servers:
-- url: https://api.apiverve.com/
+  - url: https://api.apiverve.com/
 paths:
   /v1/chinesezodiac:
     get:
       summary: Get Zodiac by Date
-      description: Chinese Zodiac returns the zodiac animal, element, and characteristics for any birth date. Accurately accounts for the Chinese lunar calendar - the zodiac year starts on Chinese New Year, not January 1st.
+      description: Get Chinese zodiac information for a specific date
       operationId: chinesezodiac
       parameters:
-      - name: date
-        in: query
-        schema:
-          type: string
-        required: true
-        description: The date in YYYY-MM-DD format (years 1900-2100)
-        example: 1990-01-15
+        - name: date
+          in: query
+          schema:
+            type: string
+          required: true
+          description: The date in YYYY-MM-DD format (years 1900-2100)
+          example: '1990-01-15'
       responses:
         '200':
           description: Successful Response
@@ -42,13 +45,13 @@ paths:
                     type: string
                     description: error
                   data:
-                    type: string
+                    type: object
                     description: data
               example:
                 status: ok
-                error: 
+                error: null
                 data:
-                  date: 1990-01-15
+                  date: '1990-01-15'
                   zodiacYear: 1989
                   animal: Snake
                   animalChinese: 蛇
@@ -57,19 +60,19 @@ paths:
                   elementColor: Yellow/Brown
                   polarity: Yin
                   traits:
-                  - Enigmatic
-                  - Intelligent
-                  - Wise
-                  - Decisive
+                    - Enigmatic
+                    - Intelligent
+                    - Wise
+                    - Decisive
                   sexagenaryCyclePosition: 6
                   fullName: Earth Snake
-                  chineseNewYear: 1990-01-27
+                  chineseNewYear: '1990-01-27'
         '401':
           description: Your request was not authorized, or your API Key was invalid
         '404':
           description: Requested resource was not found
         '500':
-          description: A server error has occured, try again later
+          description: A server error has occurred, try again later
 components:
   securitySchemes:
     api_key:
@@ -77,4 +80,4 @@ components:
       name: x-api-key
       in: header
 security:
-- api_key: []
+  - api_key: []
