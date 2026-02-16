@@ -232,8 +232,9 @@ from apiverve_chinesezodiac.apiClient import ChinesezodiacAPIClient
 
 api = ChinesezodiacAPIClient("[YOUR_API_KEY]")
 
+query = { "date": "1990-01-15" }
+
 try:
-    query = { "date": "1990-01-15" }
     result = api.execute(query)
     print(result)
 finally:
