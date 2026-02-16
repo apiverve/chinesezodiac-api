@@ -1,0 +1,16 @@
+name: apiverve_chinesezodiac
+description: Chinese Zodiac returns the zodiac animal, element, and characteristics for any birth date. Accurately accounts for the Chinese lunar calendar - the zodiac year starts on Chinese New Year, not January 1st.
+version: 1.1.14
+homepage: https://apiverve.com/marketplace/chinesezodiac?utm_source=dart&utm_medium=homepage
+repository: https://github.com/apiverve/chinesezodiac-api/tree/main/dart
+
+environment:
+  sdk: '>=3.0.0 <4.0.0'
+
+dependencies:
+  http: ^1.1.0
+  http_parser: ^4.0.0
+
+dev_dependencies:
+  lints: ^3.0.0
+  test: ^1.24.0
