@@ -191,11 +191,44 @@ x-api-key: YOUR_API_KEY_HERE
 Get your API key: [https://apiverve.com](https://apiverve.com)
 
 ### Response Format
-All responses are JSON with this structure:
+
+Every APIVerve endpoint returns the same envelope — check `status`, then read `data`:
+
 ```json
 {
   "status": "ok",
+  "error": null,
   "data": { ... }
+}
+```
+
+### Example Response
+
+A real response from the Chinese Zodiac API:
+
+```json
+{
+  "status": "ok",
+  "error": null,
+  "data": {
+    "date": "1990-01-15",
+    "zodiacYear": 1989,
+    "animal": "Snake",
+    "animalChinese": "蛇",
+    "element": "Earth",
+    "elementChinese": "土",
+    "elementColor": "Yellow/Brown",
+    "polarity": "Yin",
+    "traits": [
+      "Enigmatic",
+      "Intelligent",
+      "Wise",
+      "Decisive"
+    ],
+    "sexagenaryCyclePosition": 6,
+    "fullName": "Earth Snake",
+    "chineseNewYear": "1990-01-27"
+  }
 }
 ```
 
