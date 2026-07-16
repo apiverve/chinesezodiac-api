@@ -25,15 +25,18 @@ namespace APIVerve.API.ChineseZodiac
 
         [JsonProperty("data")]
         public Data Data { get; set; }
+
+        [JsonProperty("premium")]
+        public Premium Premium { get; set; }
     }
 
     public partial class Data
     {
         [JsonProperty("date")]
-        public DateTimeOffset Date { get; set; }
+        public DateTimeOffset? Date { get; set; }
 
         [JsonProperty("zodiacYear")]
-        public long ZodiacYear { get; set; }
+        public long? ZodiacYear { get; set; }
 
         [JsonProperty("animal")]
         public string Animal { get; set; }
@@ -57,12 +60,24 @@ namespace APIVerve.API.ChineseZodiac
         public string[] Traits { get; set; }
 
         [JsonProperty("sexagenaryCyclePosition")]
-        public long SexagenaryCyclePosition { get; set; }
+        public long? SexagenaryCyclePosition { get; set; }
 
         [JsonProperty("fullName")]
         public string FullName { get; set; }
 
         [JsonProperty("chineseNewYear")]
-        public DateTimeOffset ChineseNewYear { get; set; }
+        public DateTimeOffset? ChineseNewYear { get; set; }
+    }
+
+    public partial class Premium
+    {
+        [JsonProperty("message")]
+        public string Message { get; set; }
+
+        [JsonProperty("upgrade_url")]
+        public Uri UpgradeUrl { get; set; }
+
+        [JsonProperty("locked_fields")]
+        public string[] LockedFields { get; set; }
     }
 }
