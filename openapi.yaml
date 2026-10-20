@@ -19,7 +19,7 @@ servers:
 paths:
   /v1/chinesezodiac:
     get:
-      summary: Get Zodiac by Date
+      summary: Chinese Zodiac
       description: Get Chinese zodiac information for a specific date
       operationId: chinesezodiac
       parameters:
