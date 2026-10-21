@@ -1,7 +1,7 @@
 {
     "name": "apiverve/chinesezodiac",
     "description": "Chinese Zodiac returns the zodiac animal, element, and characteristics for any birth date. Accurately accounts for the Chinese lunar calendar - the zodiac year starts on Chinese New Year, not January 1st.",
-    "version": "1.2.0",
+    "version": "1.2.2",
     "type": "library",
     "license": "MIT",
     "authors": [
@@ -21,7 +21,7 @@
         "chinese astrology",
         "shengxiao"
     ],
-    "homepage": "https://apiverve.com/marketplace/chinesezodiac?utm_source=php&utm_medium=homepage",
+    "homepage": "https://apiverve.com/marketplace/chinesezodiac?utm_source=php&utm_medium=referral&utm_content=homepage",
     "support": {
         "email": "hello@apiverve.com",
         "docs": "https://docs.apiverve.com/ref/chinesezodiac",
