@@ -46,7 +46,7 @@ final _formatPatterns = {
 
 /// Chinese Zodiac API client.
 ///
-/// For more information, visit: https://apiverve.com/marketplace/chinesezodiac?utm_source=dart&utm_medium=readme
+/// For more information, visit: https://apiverve.com/marketplace/chinesezodiac?utm_source=dart&utm_medium=referral&utm_content=readme
 ///
 /// Parameters:
 /// * [date] (required) - The date in YYYY-MM-DD format (years 1900-2100) [format: date]
